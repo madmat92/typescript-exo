@@ -1,7 +1,8 @@
 class Menu {
     plats: Array<string>;
     pages: number;
-
+    //ingredients: true;
+    
     //constructeur d'objet
     constructor(liste_plats: Array<string>, nb_pages: number) {
         this.plats = liste_plats;
@@ -18,6 +19,6 @@ class Menu {
 }
 
 // Instance de la class Menu
-var menuLundi = new Menu(["Epinards", "Oeufs pochés", "Poisson panés"], 1);
+var menuLundi = new Menu(["Epinaards", "Oeufs pochés", "Poisson panés"], 1);
 
 menuLundi.list();

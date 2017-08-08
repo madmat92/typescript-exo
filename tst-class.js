@@ -1,4 +1,5 @@
 var Menu = (function () {
+    //ingredients: true;
     //constructeur d'objet
     function Menu(liste_plats, nb_pages) {
         this.plats = liste_plats;
@@ -14,5 +15,5 @@ var Menu = (function () {
     return Menu;
 }());
 // Instance de la class Menu
-var menuLundi = new Menu(["Epinards", "Oeufs pochés", "Poisson panés"], 1);
+var menuLundi = new Menu(["Epinaards", "Oeufs pochés", "Poisson panés"], 1);
 menuLundi.list();
