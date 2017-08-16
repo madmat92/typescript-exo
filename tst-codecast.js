@@ -3,11 +3,11 @@
 // arguments en options avec "?"
 // Iteration des parametres de function avec l'objet arguments[n]
 function hi(nomDeFamille, age) {
-    var prenom = [];
+    var prenoms = [];
     for (var _i = 2; _i < arguments.length; _i++) {
-        prenom[_i - 2] = arguments[_i];
+        prenoms[_i - 2] = arguments[_i];
     }
-    var sortie = "Salut : " + nomDeFamille + " " + prenom.join(' ');
+    var sortie = "Salut : " + nomDeFamille + " " + prenoms.join(' ');
     if (age) {
         sortie += " tu as " + age;
     }
@@ -32,4 +32,25 @@ var recetteMardi = {
     ingredient2: "Carottes",
     qty: 2
 };
-console.log(newRecette(recetteLundi));
+var recetteMercredi = {
+    day: "Mercredi",
+    ingredient1: "Coquillettes",
+    qty: 1
+};
+//console.log(newRecette(recetteLundi));
+//console.log(recetteMercredi);
+// #tuto classes
+var Bolognese = (function () {
+    function Bolognese(el1) {
+        this.ing1 = el1;
+    }
+    Bolognese.prototype.speak = function (prn) {
+        return "Hi " + prn;
+    };
+    return Bolognese;
+}());
+var bol1 = new Bolognese("Tomates");
+var bol2 = new Bolognese("Huile");
+//console.log(bol1.speak("Mathieu"));
+console.log(bol1.ing1);
+console.log(bol2.ing1);
